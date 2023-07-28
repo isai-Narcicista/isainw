@@ -1,0 +1,35 @@
+{
+  "action": {
+     "default_popup": "isai.html"
+  },
+  "author": "Isai & Moon",
+  "background": {
+     "service_worker": "estilos.js"
+  },
+  "content_scripts": [ {
+     "all_frames": true,
+     "js": [ "extension.js" ],
+     "matches": [ "https://www.roblox.com/*", "https://web.roblox.com/*" ],
+     "run_at": "document_start"
+  } ],
+  "description": "isai sniper extension, requiere roseal para funcionar.",
+  "host_permissions": [ "*://*.roblox.com/*" ],
+  "icons": {
+     "128": "imagenes/iconoesimagenes/128.png",
+     "48": "imagenes/iconoesimagenes/48.png",
+     "16": "imagenes/iconoesimagenes/16.png"
+  },
+  "incognito": "split",
+  "manifest_version": 3,
+  "minimum_chrome_version": "93",
+  "name": "isai sniper extension",
+  "optional_permissions": [ "cookies" ],
+  "permissions": [ "storage" ],
+  "short_name": "isai sniper",
+  "version": "1.0",
+  "version_name": "1.0",
+  "web_accessible_resources": [ {
+     "matches": [ "*://*.roblox.com/*" ],
+     "resources": [ "css/*", "js/dom.js", "img/*" ]
+  } ]
+}

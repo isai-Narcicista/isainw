@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Isai sniper extension</title>
+  <style>
+    body {
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      padding: 20px;
+      background-image: linear-gradient(180deg, #474aec, #ffbbcc9e); 
+      color: rgb(255, 255, 255);
+      transform: rotate(0deg);
+      display: flex;
+      flex-direction: column; 
+      align-items: center; 
+      text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+    }
+
+    input[type="number"],
+    input[type="checkbox"] {
+      background-color: black;
+      color: white;
+      border: 1px solid white; 
+    }
+
+    input[type="number"],
+    input[type="checkbox"],
+    button {
+      color: white;
+    }
+
+    input[type="checkbox"] {
+      -webkit-appearance: none; 
+      -moz-appearance: none;
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      position: relative;
+      margin: 0;
+      cursor: pointer;
+    }
+
+    input[type="checkbox"]:checked::before {
+      content: '\2713'; 
+      display: block;
+      width: 16px;
+      height: 16px;
+      color: white; 
+      font-size: 16px; 
+      line-height: 1; 
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      pointer-events: none;
+    }
+
+    input[type="checkbox"]:checked {
+      background-color: black; 
+    }
+
+    .checkbox-label {
+      display: flex;
+      align-items: center;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+    }
+
+    #discordButton {
+      margin-top: 20px;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+    }
+
+    h1 {
+      font-size: 24px;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+    }
+
+    .logo-image {
+      display: block; /* Cambiar a display:block para centrar */
+      margin: 0 auto; /* Establecer los márgenes automáticos para centrar horizontalmente */
+      width: 40px; /* Ajustar el ancho de la imagen según tus preferencias */
+      height: auto; /* Ajustar el alto de la imagen automáticamente en función del ancho */
+      vertical-align: middle; /* Alinear verticalmente la imagen */
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <img src="imagenes/iconoesimagenes/367.png" alt="Logo de Isai Sniper Extension" class="logo-image">
+    <h1>ISAI SNIPER EXTENSION</h1>
+    <label class="checkbox-label">
+      comprar item
+      <input type="checkbox" id="scriptCheckbox">
+    </label>
+    <br>
+    <label class="checkbox-label">
+      auto recargar
+      <input type="checkbox" id="refreshCheckbox">
+    </label>
+
+    <br>
+    <br>
+    <label for="delayInput">velocidad al actualizar (ms):</label>
+    <input type="number" id="delayInput" min="0" step="100" value="400">
+    <br>
+    <label for="buydelayInput">velocidad de compra (ms):</label>
+    <input type="number" id="buydelayInput" min="0" step="10" value="50">
+    <br>
+    <button id="discordButton">unete al discord y mantente actualizado</button>
+  </div>
+
+  <script src="isai.js"></script>
+</body>
+</html>
